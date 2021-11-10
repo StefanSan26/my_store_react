@@ -33,5 +33,6 @@
     "Blob": true,
     "navigator": true
   },
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+	"arrow-body-style": ["error", "as-needed"]
 }
