@@ -18,11 +18,11 @@ const useInitialState = () =>{
 		})
 	}
 
-	return (
+	return {
 		addToCart,
 		removeFromCart,
 		state
-	)
+	}
 
 }
 

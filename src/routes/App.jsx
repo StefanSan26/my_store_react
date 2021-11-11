@@ -12,10 +12,10 @@ import useInitialState from '../hooks/useInitialState';
 
 
 const App = () => {
-	const initialState = useInitialState()
+	const initialState = useInitialState();
 	
 	return(
-	<AppContext.Provider value={initialState} >
+	<AppContext.Provider value={initialState}>
 	<BrowserRouter>
 		<Layout>
 			<Routes>
@@ -32,3 +32,4 @@ const App = () => {
 )};
 
 export default App;
+

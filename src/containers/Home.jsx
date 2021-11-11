@@ -1,11 +1,11 @@
 import React from 'react';
-import initialState from '../initialState';
+// import initialState from '../initialState';
 import Products from '../components/Products'
 
 const Home = () => {
 	return (
 		<div>
-      <Products products={initialState.products} />
+      <Products/>
 		</div>
 	);
 };
