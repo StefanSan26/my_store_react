@@ -12,7 +12,7 @@ const Header = () => {
 				</h1>
 			<div className="Header-cheackout">
 				<Link to="/checkout">
-					<i className="fas fa-shopping-basket"/>
+					<i className="fas fa-shopping-basket fa-2x"/>
 				</Link>
 			</div>
 		</div>
