@@ -3,6 +3,7 @@ import AppContext from '../context/AppContext';
 import '../styles/components/Success.css';
 import Map from '../components/Map'
 
+
 const Success = () => {
 	const {state} = useContext(AppContext)
 	const {buyer} = state
