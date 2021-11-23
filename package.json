@@ -14,7 +14,9 @@
   "author": "Stefan Sanchez <stefanace26@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.16.3",
     "@react-google-maps/api": "^2.7.0",
+    "axios": "^0.24.0",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "babel-eslint": "^10.1.0",
