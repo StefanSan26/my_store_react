@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext.js'
 import '../styles/components/Checkout.css'
+import { Helmet } from 'react-helmet';
 
 const Checkout = () => {
 	const {state, removeFromCart} =useContext(AppContext)
@@ -18,6 +19,12 @@ const Checkout = () => {
 	}
 
 	return (
+		<>
+		<Helmet>
+			<title>
+				Lista de Pedidos
+			</title>
+		</Helmet>
 		<div>
       <div className="Checkout">
 				<div className="Checkout-content">
@@ -45,6 +52,7 @@ const Checkout = () => {
 			)}
 
 		</div>
+		</>
 	);
 };
 
