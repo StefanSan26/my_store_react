@@ -1,9 +1,32 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import initialState from '../initialState'
+import axios from 'axios'
 
+const API = 'http://localhost:1337/products'
+const API2 = 'https://us-central1-gndx-fake-api.cloudfunctions.net/api'
 
 const useInitialState = () =>{
 	const [state , setState] = useState(initialState)
+	const [products, setProducts] = useState([])
+
+	// const MyFunctionnalComponent = props => {
+	// 	useEffect(() => {
+	// 		// Create an scoped async function in the hook
+	// 		async function anyNameFunction() {
+	// 			await loadContent();
+	// 		}
+	// 		// Execute the created function directly
+	// 		anyNameFunction();
+	// 	}, []);
+
+		useEffect(() => {
+			const getData = async () => {
+				const response = await axios(API);
+				setProducts(response.data);
+			};
+	
+			getData();
+		}, []);
 
 	const addToCart = payload =>{
 		setState({
@@ -35,7 +58,8 @@ const useInitialState = () =>{
 		removeFromCart,
 		state,
 		addToBuyer,
-		addNewOrder
+		addNewOrder,
+		products
 	}
 
 }

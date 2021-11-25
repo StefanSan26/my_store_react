@@ -6,12 +6,21 @@ const usePsAddress = address =>{
 	// const API = `http://api.positionstack.com/v1/forward?access_key=33de57f7b5dd748d96503ebd84e11113&query=$1600%20Pennsylvania%20Ave%20NW,%20Washington%20DC`
 	const API = `http://api.positionstack.com/v1/forward?access_key=33de57f7b5dd748d96503ebd84e11113&query=${address}`
 	
-	useEffect(async () => {
-		const response =await axios(API);
+	// useEffect(async () => {
+	// 	const response =await axios(API);
 
-		setMap(response.data.data[0]);
-		// console.log(response.data.data[0])
-	}, []);
+	// 	setMap(response.data.data[0]);
+	// 	// console.log(response.data.data[0])
+	// }, []);
+
+	useEffect(() => {
+    const getData = async () => {
+      const response = await axios(API);
+      setMap(response.data.results[0].geometry.location);
+    };
+
+    getData();
+  }, []);
 	return map;
 }
 
