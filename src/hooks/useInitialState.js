@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import initialState from '../initialState'
 import axios from 'axios'
 
-const API = 'http://localhost:1337/products'
+// const API = 'http://localhost:1337/products'
 const API2 = 'https://us-central1-gndx-fake-api.cloudfunctions.net/api'
 
 const useInitialState = () =>{
@@ -21,7 +21,7 @@ const useInitialState = () =>{
 
 		useEffect(() => {
 			const getData = async () => {
-				const response = await axios(API);
+				const response = await axios(API2);
 				setProducts(response.data);
 			};
 	
