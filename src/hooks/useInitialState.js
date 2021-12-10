@@ -36,9 +36,15 @@ const useInitialState = () =>{
 		})
 	}
 	const removeFromCart = payload =>{
+		let index = state.cart.indexOf(payload)
+		let prod = state.cart.splice(index,1)
+		// console.log(payload)
+		console.log(prod)
+		
 		setState({
 			...state,
-			cart:state.cart.filter(item => item.id !== payload.id)
+			// cart:state.cart
+			// cart:state.cart.filter(item => item.id !== payload.id)
 		})
 	}
 	const addToBuyer=(payload)=>{
