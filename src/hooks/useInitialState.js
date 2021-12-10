@@ -2,9 +2,9 @@ import { useState,useEffect } from "react";
 import initialState from '../initialState'
 import axios from 'axios'
 
-// const API = 'http://localhost:1337/products'
+const API = 'https://fakestoreapi.com/products'
 // const API2 = 'https://us-central1-gndx-fake-api.cloudfunctions.net/api'
-const API3 = 'https://young-island-80155.herokuapp.com/products'
+// const API3 = 'https://young-island-80155.herokuapp.com/products'
 
 const useInitialState = () =>{
 	const [state , setState] = useState(initialState)
@@ -22,7 +22,7 @@ const useInitialState = () =>{
 
 		useEffect(() => {
 			const getData = async () => {
-				const response = await axios(API3);
+				const response = await axios(API);
 				setProducts(response.data);
 			};
 	

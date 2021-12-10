@@ -4,7 +4,7 @@ const Product = ({product,handleAddToCart}) => {
 	return (
 		<div className="Products-item">
 			{/* <img src={`http://localhost:1337${product.image[0].url}`} alt={product.title} /> */}
-			<img src={product.image[0].name} alt={product.title} />
+			<img src={product.image} alt={product.title} />
 			<div className="Products-item-info">
 				<h2>
 					{product.title}
