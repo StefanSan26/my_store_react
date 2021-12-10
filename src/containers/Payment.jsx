@@ -17,6 +17,7 @@ const Payment = ({history}) => {
 	
 	const options ={
 		// clientId:'ATN4MgsCVKSXinkSTL1YqlANTikW5fXyo5C7TkyVUG7JB0DTr1G2aabkWFF9Uz6kKo61tL48cfWpomc4',
+		// clientId:'AX4LBUAWoDRiPHNkGAAMJcQ1kPO9Qn3tb7ZlRifXuY5NG-9EiNEhnEunbYwwSO3A9jF-wc9XgqCpDu_m',
 		clientId:'sb',
 		intent:'capture',
 		currency: 'USD'
