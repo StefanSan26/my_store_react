@@ -68,3 +68,7 @@
 .Products-item button:hover {
   background-color: rgba(39, 44, 49, 0.06);
 }
+.loading{
+	text-align: center;
+	grid-column-start: 2;
+}

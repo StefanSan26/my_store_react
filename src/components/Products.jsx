@@ -2,6 +2,7 @@ import React from 'react';
 import Product from './Product';
 import '../styles/components/Products.css'
 import AppContext from '../context/AppContext'
+import Loading from './Loading';
 
 const Products = () => {
 	const {products,addToCart} = React.useContext(AppContext)
@@ -13,9 +14,9 @@ const Products = () => {
 	return (
 		<div className="Products">
 			<div className="Products-items">
-				{products.map(product=>(
+				{products.length>0 ? products.map(product=>(
 					<Product key={product.id} product={product} handleAddToCart={handleAddToCart}/>
-				))}
+				)): <Loading type="bars" color="#468ccf"/>}
 			</div>
 		</div>
 	);
