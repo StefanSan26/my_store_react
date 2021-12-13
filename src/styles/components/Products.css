@@ -1,8 +1,10 @@
+@import url("../colors.css");
 .Products-items {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+	/* background-color:var(--white); */
 }
 .Products-item {
   text-decoration: none;
@@ -11,6 +13,10 @@
   border-radius: 5px;
   margin: 0 0 20px 0;
   position: relative;
+	/* border-radius: 50px;
+	background: #dbebe6;
+	box-shadow:  20px 20px 60px #bac8c4,
+							 -20px -20px 60px #fcffff; */
 	
 }
 .Products-item-info {
@@ -29,7 +35,10 @@
 }
 .Products-item-info h2 span {
   color: #33b13a;
-	background-color: #fff;
+	/* border: 1px solid rgb(0, 68, 255); */
+	/* background-color: rgb(126, 126, 163); */
+	background-color: var(--white);
+	border-radius: 3px;
 	position: absolute;
 	left: 0px;
 	bottom: 45%;
@@ -53,6 +62,8 @@
   height: 200px;
   border-radius: 5px 5px 0 0;
   object-fit: contain;
+	filter: brightness();
+	mix-blend-mode: multiply;
 }
 .Products-item button {
   background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
@@ -63,10 +74,17 @@
   outline: 0;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+	/* color: var(--white); */
 }
 .Products-item button:hover {
-  background-color: rgba(39, 44, 49, 0.06);
+  /* background: rgba(39, 44, 49, 0.26); */
+}
+.Products-item button:active {
+  /* background: rgb(42 167 97 / 88%); */
+  background: rgba(39, 44, 49, 0.26);
+
 }
 .loading{
 	text-align: center;
