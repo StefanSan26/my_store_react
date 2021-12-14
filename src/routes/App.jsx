@@ -9,6 +9,7 @@ import NotFound  from '../containers/NotFound';
 import Layout from '../components/Layout';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+import Producto from '../containers/Producto';
 // import "../styles/components/App.css"
 
 
@@ -24,6 +25,8 @@ const App = () => {
 			<Layout>
 				<Routes>
 					<Route path = "/" element={<Home/>}/>
+					{/* </Route> */}
+					<Route path = ":id" element={<Producto/>}/>
 					<Route path = "/checkout" element={<Checkout/>}/>
 					<Route path = "/checkout/information" element={<Information/>}/>
 					<Route path = "/checkout/payment" element={<Payment/>}/>

@@ -1,6 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Product = ({product,handleAddToCart}) => {
+	// const [activeProduct, setactiveProduct] = useState(0)
+	// const handleActiveProduct = (id)=>{ 
+	// 	setactiveProduct(id)
+	// }
 	return (
 		<div className="Products-item">
 			{/* <img src={`http://localhost:1337${product.image[0].url}`} alt={product.title} /> */}
@@ -9,7 +15,7 @@ const Product = ({product,handleAddToCart}) => {
 				<h2>
 					{product.title}
 					<span>
-						$ {product.price}
+						$ {product.price},{product.id}
 					</span>
 				</h2>
 				<p>
@@ -17,6 +23,10 @@ const Product = ({product,handleAddToCart}) => {
 				</p>
 			</div>
 			<button type="button" onClick={handleAddToCart(product)}>Comprar</button>
+			<Link to={`./${product.id}`}>
+				<button type="button">Ver Producto</button>
+			</Link>
+			
 		</div>
 	);
 };

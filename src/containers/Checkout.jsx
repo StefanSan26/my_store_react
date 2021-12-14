@@ -45,7 +45,7 @@ const Checkout = () => {
 			{cart.length > 0 && (
 			<div className="Checkout-sidebar">
 				<h3>{`Precio Total: $${handleSumTotal()}`}</h3>
-				<Link to="/checkout/information">
+				<Link to="information">
 				<button type="button">Continuar Pedido</button>
 				</Link>
 			</div>
