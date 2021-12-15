@@ -15,7 +15,7 @@ const Product = ({product,handleAddToCart}) => {
 				<h2>
 					{product.title}
 					<span>
-						$ {product.price},{product.id}
+						$ {product.price}
 					</span>
 				</h2>
 				<p>
@@ -24,7 +24,7 @@ const Product = ({product,handleAddToCart}) => {
 			</div>
 			<button type="button" onClick={handleAddToCart(product)}>Comprar</button>
 			<Link to={`./${product.id}`}>
-				<button type="button">Ver Producto</button>
+				<button type="button" className='Products-item-see'>Ver Producto</button>
 			</Link>
 			
 		</div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
 import AppContext from '../context/AppContext';
+import '../styles/components/Producto.css'
 
 const Producto = () => {
 	const {products,addToCart} = React.useContext(AppContext)
@@ -11,21 +12,20 @@ const Producto = () => {
 	}
 
 	return (
-		<div className='Producto'>
-			<h1>Id: {id}</h1>
-			{products[id].image ? <img src={products[id].image} alt={products[id].title} />: <p>Loading</p>}
-			<div className="Products-item-info">
-				<h2>
-					{products[id].title}
+		<div className='Producto-item'>
+			{products[id-1].image ? <img src={products[id-1].image} alt={products[id-1].title} />: <p>Loading</p>}
+			<div className="Producto-item-info">
 					<span>
-						$ {products[id].price}
+						$ {products[id-1].price}
 					</span>
+				<h2>
+					{products[id-1].title}
 				</h2>
 				<p>
-					{products[id].description}
+					{products[id-1].description}
 				</p>
 			</div>
-			<button type="button" onClick={handleAddToCart(products[id])}>Comprar</button>
+			<button type="button" onClick={handleAddToCart(products[id-1])}>Comprar</button>
 		</div>
 	);
 };
